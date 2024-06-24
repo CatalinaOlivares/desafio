@@ -7,12 +7,14 @@ import { RegistroComponent } from '../pages/registro/registro.component';
 const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'registro', component: RegistroComponent },
-  // { path: '', redirectTo: '/inicio', pathMatch: 'full' },  
-  // { path: '**', redirectTo: '/inicio' } 
+  // { path: '', redirectTo: '/inicio', pathMatch: 'full' },
+  // { path: '**', redirectTo: '/inicio' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

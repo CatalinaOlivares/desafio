@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { FormComponent } from './form/form.component';
 import { TableComponent } from './table/table.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { MaterialModule } from '../material.module';
 
 
@@ -11,8 +10,7 @@ import { MaterialModule } from '../material.module';
   declarations: [
     BusquedaComponent,
     FormComponent,
-    NavbarComponent,
-    TableComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
@@ -21,8 +19,7 @@ import { MaterialModule } from '../material.module';
   exports: [
     BusquedaComponent,
     FormComponent,
-    NavbarComponent,
-    TableComponent,
+    TableComponent
   ]
 })
 export class ComponentsModule { }

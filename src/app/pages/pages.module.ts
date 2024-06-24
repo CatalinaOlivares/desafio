@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { InicioComponent } from './inicio/inicio.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ComponentsModule } from '../components/components.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -10,12 +11,12 @@ import { ComponentsModule } from '../components/components.module';
   declarations: [
     InicioComponent,
     RegistroComponent,
-    
+
   ],
   imports: [
     CommonModule,
     ComponentsModule,
-    
+    SharedModule
   ],
   exports: [
     InicioComponent,
