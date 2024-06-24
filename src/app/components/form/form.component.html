@@ -1,0 +1,71 @@
+
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row justify-content-center ">
+                  <div class="col-12 mb-3">
+                    <label for="validationServerNombre">Nombre</label>
+                    <input type="text" class="form-control is-valid" id="validationServerNombre" placeholder="Nombre" value="" required>
+                    <div class="valid-feedback">
+                      <!-- Se ve bien! -->
+                    </div>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label for="validationServerApellido">Apellido</label>
+                    <input type="text" class="form-control is-valid" id="validationServerApellido" placeholder="Apellido" value="" required>
+                    <div class="valid-feedback">
+                      <!-- Se ve bien! -->
+                    </div>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label for="validationServerIdentificacion">Identificación</label>
+                    <input type="text" class="form-control is-invalid" id="validationServerIdentificacion" placeholder="Identificación" required>
+                    <div class="invalid-feedback">
+                      <!-- Please provide a valid identificación. -->
+                    </div>
+                  </div>
+                <div class="form-row">
+                  <div class="col-12 mb-3">
+                    <label for="validationServerGenero">Género</label>
+                    <select class="form-control is-invalid">
+                      <option selected>Extraterrestre</option>
+                      <option value="1">Masculino</option>
+                      <option value="2">Femenino</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      <!-- Please provide a valid género. -->
+                    </div>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label for="validationServerFechaNacimiento">Fecha de nacimiento</label>
+                    <input type="date" class="form-control is-invalid" id="validationServerFechaNacimiento" placeholder="Fecha de nacimiento" required>
+                    <div class="invalid-feedback">
+                      <!-- Please provide a valid fecha de nacimiento. -->
+                    </div>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label for="validationServerDireccion">Dirección</label>
+                    <input type="text" class="form-control is-invalid" id="validationServerDireccion" placeholder="Dirección" required>
+                    <div class="invalid-feedback">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-12 mb-3">
+                    <label for="validationServerEmpleo">Empleo</label>
+                    <input type="text" class="form-control is-invalid" id="validationServerEmpleo" placeholder="Empleo" required>
+                    <div class="invalid-feedback">
+                      <!-- Please provide a valid empleo. -->
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,82 @@
+<div class="table-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <!-- Apellido Column -->
+    <ng-container matColumnDef="apellido">
+      <th mat-header-cell *matHeaderCellDef> Apellido </th>
+      <td mat-cell *matCellDef="let element"> {{element.apellido}} </td>
+    </ng-container>
+
+    <!-- Identificacion Column -->
+    <ng-container matColumnDef="identificacion">
+      <th mat-header-cell *matHeaderCellDef> Identificacion </th>
+      <td mat-cell *matCellDef="let element"> {{element.identificacion}} </td>
+    </ng-container>
+
+    <!-- Genero Column -->
+    <ng-container matColumnDef="genero">
+      <th mat-header-cell *matHeaderCellDef> Genero </th>
+      <td mat-cell *matCellDef="let element"> {{element.genero}} </td>
+    </ng-container>
+
+    <!-- Fecha de nacimiento Column -->
+    <ng-container matColumnDef="fechaNacimiento">
+      <th mat-header-cell *matHeaderCellDef> Fecha de nacimiento </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaNacimiento}} </td>
+    </ng-container>
+
+    <!-- Direccion Column -->
+    <ng-container matColumnDef="direccion">
+      <th mat-header-cell *matHeaderCellDef> Dirección </th>
+      <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
+    </ng-container>
+
+    <!-- Empleo Column -->
+    <ng-container matColumnDef="empleo">
+      <th mat-header-cell *matHeaderCellDef> Empleo </th>
+      <td mat-cell *matCellDef="let element"> {{element.empleo}} </td>
+    </ng-container>
+
+    <!-- Fallecido Column -->
+      <!-- Checkbox Column -->
+      <ng-container matColumnDef="fallecido">
+        <th mat-header-cell *matHeaderCellDef> Fallecido
+          <mat-checkbox (change)="$event ? toggleAllRows() : null"
+                        [checked]="selection.hasValue() && isAllSelected()"
+                        [indeterminate]="selection.hasValue() && !isAllSelected()"
+                        [aria-label]="checkboxLabel()">
+          </mat-checkbox>
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <mat-checkbox (click)="$event.stopPropagation()"
+                        (change)="$event ? selection.toggle(row) : null"
+                        [checked]="selection.isSelected(row)"
+                        [aria-label]="checkboxLabel(row)">
+          </mat-checkbox>
+        </td>
+      </ng-container>
+      <!-- Editar-->
+  <ng-container matColumnDef="editar">
+    <th mat-header-cell *matHeaderCellDef> Editar </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button aria-label="Editar" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="Eliminar">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+</div>
+
+
