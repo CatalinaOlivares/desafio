@@ -1,4 +1,16 @@
-/* table.component.css */
-.mat-elevation-z8 {
-  margin: 20px 0;
+/* Structure */
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+h1{
+  font-size: 45px;
+  /* font-weight: bold; */
+  color: rgb(47, 21, 125);
+  text-shadow: 3px 3px 3px rgba(91, 22, 103, 0.5);
 }
