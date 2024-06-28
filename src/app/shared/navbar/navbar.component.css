@@ -3,7 +3,7 @@
   }
 
 .navbar{
-  background-color: #912ab7;
+  background-color: #edc62a;
 }
 
 .nav-link{
@@ -29,5 +29,7 @@
   position:absolute;
   right: 15px;
   top:10px;
-
+  margin-left: 10px;
+  color:aliceblue !important;
+  background-color:#0E9AE0 !important;
 }
