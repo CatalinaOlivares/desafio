@@ -15,6 +15,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -29,8 +32,13 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     PagesModule,
     BrowserModule,
-    BrowserAnimationsModule, // Importar BrowserAnimationsModule para habilitar animaciones
+    BrowserAnimationsModule, 
     SharedModule,
+    MatDialogModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule
     
     
 
@@ -38,6 +46,7 @@ import { AppComponent } from './app.component';
   providers: [
     provideAnimationsAsync()
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
