@@ -37,7 +37,7 @@ import { MatButtonModule } from '@angular/material/button';
     TableComponent,
   ],
   providers: [
-    { provide: MAT_DIALOG_DATA, useValue: {} },//agregue esto y funco pero aun no se agregan valores
+    { provide: MAT_DIALOG_DATA, useValue: {} },
     { provide: MatDialogRef, useValue: {} }
   ]
   

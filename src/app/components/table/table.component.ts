@@ -15,28 +15,28 @@ export interface Person {
   fechaNacimiento: string;
   direccion: string;
   empleo: string;
-  fallecido: boolean;
+  fallecido: string;
 }
 
 const ELEMENT_DATA: Person[] = [
-  { nombre: 'Juanita', apellido: 'Perez', identificacion: '123406789', genero: 'Femenino', fechaNacimiento: '1990-01-01', direccion: 'Calle 123', empleo: 'Programadora', fallecido: false },
-  { nombre: 'Ana', apellido: 'Gomez', identificacion: '987657321', genero: 'Femenino', fechaNacimiento: '1992-03-15', direccion: 'Avenida Siempre Viva 742', empleo: 'Diseñadora', fallecido: false },
-  { nombre: 'Carlos', apellido: 'Lopez', identificacion: '123977456', genero: 'Masculino', fechaNacimiento: '1985-07-20', direccion: 'Calle Falsa 123', empleo: 'Ingeniero', fallecido: false },
-  { nombre: 'Maria', apellido: 'Martinez', identificacion: '321654987', genero: 'Femenino', fechaNacimiento: '1991-11-11', direccion: 'Plaza Mayor 456', empleo: 'Abogada', fallecido: false },
-  { nombre: 'Luis', apellido: 'Rodriguez', identificacion: '756789123', genero: 'Masculino', fechaNacimiento: '1987-09-30', direccion: 'Calle del Sol 789', empleo: 'Médico', fallecido: false },
-  { nombre: 'Mario', apellido: 'Perez', identificacion: '14577789', genero: 'Masculino', fechaNacimiento: '1990-01-01', direccion: 'Calle 13', empleo: 'Programador', fallecido: false },
-  { nombre: 'Juanita', apellido: 'Perez', identificacion: '173456789', genero: 'Femenino', fechaNacimiento: '1990-01-01', direccion: 'Calle 123', empleo: 'Programadora', fallecido: false },
-  { nombre: 'Ana', apellido: 'Gomez', identificacion: '987654311', genero: 'Femenino', fechaNacimiento: '1992-03-15', direccion: 'Avenida Siempre Viva 742', empleo: 'Diseñadora', fallecido: false },
-  { nombre: 'Carlos', apellido: 'Lopez', identificacion: '123987756', genero: 'Masculino', fechaNacimiento: '1985-07-20', direccion: 'Calle Falsa 123', empleo: 'Ingeniero', fallecido: false },
-  { nombre: 'Maria', apellido: 'Martinez', identificacion: '32165498', genero: 'Femenino', fechaNacimiento: '1991-11-11', direccion: 'Plaza Mayor 456', empleo: 'Abogada', fallecido: false },
-  { nombre: 'Luis', apellido: 'Rodriguez', identificacion: '476789123', genero: 'Masculino', fechaNacimiento: '1987-09-30', direccion: 'Calle del Sol 789', empleo: 'Médico', fallecido: false },
-  { nombre: 'Mario', apellido: 'Perez', identificacion: '145737898', genero: 'Masculino', fechaNacimiento: '1990-01-01', direccion: 'Calle 13', empleo: 'Programador', fallecido: false },
-  { nombre: 'Juanita', apellido: 'Perez', identificacion: '12345679', genero: 'Femenino', fechaNacimiento: '1990-01-01', direccion: 'Calle 123', empleo: 'Programadora', fallecido: false },
-  { nombre: 'Ana', apellido: 'Gomez', identificacion: '97657321', genero: 'Femenino', fechaNacimiento: '1992-03-15', direccion: 'Avenida Siempre Viva 742', empleo: 'Diseñadora', fallecido: false },
-  { nombre: 'Carlos', apellido: 'Lopez', identificacion: '12398456', genero: 'Masculino', fechaNacimiento: '1985-07-20', direccion: 'Calle Falsa 123', empleo: 'Ingeniero', fallecido: false },
-  { nombre: 'Maria', apellido: 'Martinez', identificacion: '32165487', genero: 'Femenino', fechaNacimiento: '1991-11-11', direccion: 'Plaza Mayor 456', empleo: 'Abogada', fallecido: false },
-  { nombre: 'Luis', apellido: 'Rodriguez', identificacion: '456789123', genero: 'Masculino', fechaNacimiento: '1987-09-30', direccion: 'Calle del Sol 789', empleo: 'Médico', fallecido: false },
-  { nombre: 'Mario', apellido: 'Perez', identificacion: '14573789', genero: 'Masculino', fechaNacimiento: '1990-01-01', direccion: 'Calle 13', empleo: 'Programador', fallecido: false },
+  { nombre: 'Juanita', apellido: 'Perez', identificacion: '123406789', genero: 'Femenino', fechaNacimiento: '1990-01-01', direccion: 'Calle 123', empleo: 'Programadora', fallecido: 'No' },
+  { nombre: 'Ana', apellido: 'Gomez', identificacion: '987657321', genero: 'Femenino', fechaNacimiento: '1992-03-15', direccion: 'Avenida Siempre Viva 742', empleo: 'Diseñadora', fallecido: 'No' },
+  { nombre: 'Carlos', apellido: 'Lopez', identificacion: '123977456', genero: 'Masculino', fechaNacimiento: '1985-07-20', direccion: 'Calle Falsa 123', empleo: 'Ingeniero', fallecido: 'No' },
+  { nombre: 'Maria', apellido: 'Martinez', identificacion: '321654987', genero: 'Femenino', fechaNacimiento: '1991-11-11', direccion: 'Plaza Mayor 456', empleo: 'Abogada', fallecido: 'No' },
+  { nombre: 'Luis', apellido: 'Rodriguez', identificacion: '756789123', genero: 'Masculino', fechaNacimiento: '1987-09-30', direccion: 'Calle del Sol 789', empleo: 'Médico', fallecido: 'No' },
+  { nombre: 'Mario', apellido: 'Perez', identificacion: '14577789', genero: 'Masculino', fechaNacimiento: '1990-01-01', direccion: 'Calle 13', empleo: 'Programador', fallecido: 'No' },
+  { nombre: 'Juanita', apellido: 'Perez', identificacion: '173456789', genero: 'Femenino', fechaNacimiento: '1990-01-01', direccion: 'Calle 123', empleo: 'Programadora', fallecido: 'No' },
+  { nombre: 'Ana', apellido: 'Gomez', identificacion: '987654311', genero: 'Femenino', fechaNacimiento: '1992-03-15', direccion: 'Avenida Siempre Viva 742', empleo: 'Diseñadora', fallecido: 'No' },
+  { nombre: 'Carlos', apellido: 'Lopez', identificacion: '123987756', genero: 'Masculino', fechaNacimiento: '1985-07-20', direccion: 'Calle Falsa 123', empleo: 'Ingeniero', fallecido: 'No' },
+  { nombre: 'Maria', apellido: 'Martinez', identificacion: '32165498', genero: 'Femenino', fechaNacimiento: '1991-11-11', direccion: 'Plaza Mayor 456', empleo: 'Abogada', fallecido: 'No' },
+  { nombre: 'Luis', apellido: 'Rodriguez', identificacion: '476789123', genero: 'Masculino', fechaNacimiento: '1987-09-30', direccion: 'Calle del Sol 789', empleo: 'Médico', fallecido: 'No' },
+  { nombre: 'Mario', apellido: 'Perez', identificacion: '145737898', genero: 'Masculino', fechaNacimiento: '1990-01-01', direccion: 'Calle 13', empleo: 'Programador', fallecido: 'No' },
+  { nombre: 'Juanita', apellido: 'Perez', identificacion: '12345679', genero: 'Femenino', fechaNacimiento: '1990-01-01', direccion: 'Calle 123', empleo: 'Programadora', fallecido: 'No' },
+  { nombre: 'Ana', apellido: 'Gomez', identificacion: '97657321', genero: 'Femenino', fechaNacimiento: '1992-03-15', direccion: 'Avenida Siempre Viva 742', empleo: 'Diseñadora', fallecido: 'No' },
+  { nombre: 'Carlos', apellido: 'Lopez', identificacion: '12398456', genero: 'Masculino', fechaNacimiento: '1985-07-20', direccion: 'Calle Falsa 123', empleo: 'Ingeniero', fallecido: 'No' },
+  { nombre: 'Maria', apellido: 'Martinez', identificacion: '32165487', genero: 'Femenino', fechaNacimiento: '1991-11-11', direccion: 'Plaza Mayor 456', empleo: 'Abogada', fallecido: 'No' },
+  { nombre: 'Luis', apellido: 'Rodriguez', identificacion: '456789123', genero: 'Masculino', fechaNacimiento: '1987-09-30', direccion: 'Calle del Sol 789', empleo: 'Médico', fallecido: 'No' },
+  { nombre: 'Mario', apellido: 'Perez', identificacion: '14573789', genero: 'Masculino', fechaNacimiento: '1990-01-01', direccion: 'Calle 13', empleo: 'Programador', fallecido: 'No' },
 ];
 
 @Component({
@@ -104,6 +104,8 @@ export class TableComponent {
   openEditModal(row: Person) {
     const dialogRef = this.dialog.open(FormComponent, {
       data: row
+      
+
     });
   
     dialogRef.afterClosed().subscribe(result => {
