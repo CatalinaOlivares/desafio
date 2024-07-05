@@ -33,13 +33,13 @@
       </mat-form-field>
     </div>
     <div class="form-group">
-      <mat-form-field appearance="fill">
-        <mat-label>Fecha de nacimiento</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento" placeholder="Fecha de nacimiento" required>
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-        <mat-error *ngIf="form.controls['fechaNacimiento'].invalid">Por favor ingresa una fecha válida</mat-error>
-      </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha de nacimiento</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento" placeholder="Fecha de nacimiento" required [ngModel]="form.controls['fechaNacimiento'].value | date:'yyyy-MM-dd'" (ngModelChange)="form.controls['fechaNacimiento'].setValue($event)">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="form.controls['fechaNacimiento'].invalid">Por favor ingresa una fecha válida</mat-error>
+    </mat-form-field>
     </div>
     <div class="form-group">
       <mat-form-field appearance="fill">

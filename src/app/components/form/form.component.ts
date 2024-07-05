@@ -31,18 +31,7 @@ export class FormComponent {
 
     console.log(this.regitroForm);
   }
-    /*
-  onSubmit() {
-    const rutValido = this.validarRut(this.form.value.identificacion);
-    if (rutValido) {
-      this.dialogRef.close(this.form.value);
-    }
-    else{
-      alert('Rut no valido');
-      return; 
-  }
-  }
- */
+
   onSubmit() {
     const rutValido = this.validarRut(this.form.value.identificacion);
     if (!rutValido) {
