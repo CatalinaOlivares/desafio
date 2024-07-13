@@ -1,4 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: url("./assets/img/fondo_nubes.jpg") repeat;
+}
+
+
+button {
+  background-color: #0E9AE0;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+h1 {
+  font-size: 2.9rem !important;
+  color: rgb(47, 21, 125);
+  text-shadow: 3px 3px 3px rgba(91, 22, 103, 0.5);
+}
+
+h2 {
+  font: bold 1.812rem / 3.25rem Roboto, sans-serif !important;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-family: Tahoma;
+}
+
+mat-card-content ul {
+  margin-bottom: 40px;
+}
+
+mat-card-content ul li {
+  font-size: 1rem;
+  font-family: Tahoma;
+  margin-bottom: 20px;
+}

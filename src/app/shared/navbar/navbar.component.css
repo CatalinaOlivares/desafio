@@ -1,0 +1,21 @@
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #edc62a;
+  box-shadow: 1px 1px 10px #000;
+  margin-bottom: 80px;
+}
+
+.navbar-brand img {
+  position: absolute;
+  top: 0;
+  filter: drop-shadow(-2px 2px 15px rgba(0, 0, 0, 0.7));
+}
+
+.boton-buscador {
+  margin-left: 10px;
+  color: aliceblue !important;
+  background-color: #0E9AE0 !important;
+}

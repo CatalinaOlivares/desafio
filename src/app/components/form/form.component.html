@@ -1,71 +1,77 @@
-
-  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div class="row justify-content-center ">
-                  <div class="col-12 mb-3">
-                    <label for="validationServerNombre">Nombre</label>
-                    <input type="text" class="form-control is-valid" id="validationServerNombre" placeholder="Nombre" value="" required>
-                    <div class="valid-feedback">
-                      <!-- Se ve bien! -->
-                    </div>
-                  </div>
-                  <div class="col-12 mb-3">
-                    <label for="validationServerApellido">Apellido</label>
-                    <input type="text" class="form-control is-valid" id="validationServerApellido" placeholder="Apellido" value="" required>
-                    <div class="valid-feedback">
-                      <!-- Se ve bien! -->
-                    </div>
-                  </div>
-                  <div class="col-12 mb-3">
-                    <label for="validationServerIdentificacion">Identificación</label>
-                    <input type="text" class="form-control is-invalid" id="validationServerIdentificacion" placeholder="Identificación" required>
-                    <div class="invalid-feedback">
-                      <!-- Please provide a valid identificación. -->
-                    </div>
-                  </div>
-                <div class="form-row">
-                  <div class="col-12 mb-3">
-                    <label for="validationServerGenero">Género</label>
-                    <select class="form-control is-invalid">
-                      <option selected>Extraterrestre</option>
-                      <option value="1">Masculino</option>
-                      <option value="2">Femenino</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      <!-- Please provide a valid género. -->
-                    </div>
-                  </div>
-                  <div class="col-12 mb-3">
-                    <label for="validationServerFechaNacimiento">Fecha de nacimiento</label>
-                    <input type="date" class="form-control is-invalid" id="validationServerFechaNacimiento" placeholder="Fecha de nacimiento" required>
-                    <div class="invalid-feedback">
-                      <!-- Please provide a valid fecha de nacimiento. -->
-                    </div>
-                  </div>
-                  <div class="col-12 mb-3">
-                    <label for="validationServerDireccion">Dirección</label>
-                    <input type="text" class="form-control is-invalid" id="validationServerDireccion" placeholder="Dirección" required>
-                    <div class="invalid-feedback">
-                    </div>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col-12 mb-3">
-                    <label for="validationServerEmpleo">Empleo</label>
-                    <input type="text" class="form-control is-invalid" id="validationServerEmpleo" placeholder="Empleo" required>
-                    <div class="invalid-feedback">
-                      <!-- Please provide a valid empleo. -->
-                    </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
+<h2 mat-dialog-title>Editar Persona</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" placeholder="Nombre" required>
+        <mat-error *ngIf="form.controls['nombre'].invalid">Por favor ingresa un nombre válido</mat-error>
+      </mat-form-field>
     </div>
-  </div>
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input matInput formControlName="apellido" placeholder="Apellido" required>
+        <mat-error *ngIf="form.controls['apellido'].invalid">Por favor ingresa un apellido válido</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Identificación</mat-label>
+        <input matInput formControlName="identificacion" placeholder="Identificación" required>
+        <mat-error *ngIf="form.controls['identificacion'].invalid">Por favor ingresa una identificación válida</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Género</mat-label>
+        <mat-select formControlName="genero" required>
+          <mat-option value="Masculino">Masculino</mat-option>
+          <mat-option value="Femenino">Femenino</mat-option>
+          <mat-option value="Otro">Otro</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha de nacimiento</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento" placeholder="Fecha de nacimiento" required [ngModel]="form.controls['fechaNacimiento'].value | date:'yyyy-MM-dd'" (ngModelChange)="form.controls['fechaNacimiento'].setValue($event)">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="form.controls['fechaNacimiento'].invalid">Por favor ingresa una fecha válida</mat-error>
+    </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Dirección</mat-label>
+        <input matInput formControlName="direccion" placeholder="Dirección" required>
+        <mat-error *ngIf="form.controls['direccion'].invalid">Por favor ingresa una dirección válida</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Empleo</mat-label>
+        <input matInput formControlName="empleo" placeholder="Empleo" required>
+        <mat-error *ngIf="form.controls['empleo'].invalid">Por favor ingresa un empleo válido</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Fallecido</mat-label>
+        <mat-select formControlName="fallecido" required>
+          <mat-option value="Sí">Sí</mat-option>
+          <mat-option value="No">No</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.controls['fallecido'].invalid">Por favor selecciona una opción válida</mat-error>
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="onClosed()">Cancelar</button>
+    <!-- <button mat-raised-button color="primary" [disabled]="form.invalid">Guardar</button> -->
+     <button mat-button (click)="onSubmit()">Guardar</button>
+  </mat-dialog-actions>
+</form>
+
+
+

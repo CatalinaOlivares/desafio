@@ -1,8 +1,9 @@
 /* table.component.css */
 .mat-elevation-z8 {
     margin: 10px 0;
-    
-    
-
   }
   
+button{
+  color:aliceblue !important;
+  background-color:#0E9AE0 !important;
+}
