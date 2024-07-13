@@ -1,35 +1,21 @@
 .min-vh-100 {
-    min-height: 100vh;
-  }
+  min-height: 100vh;
+}
 
-.navbar{
+.navbar {
   background-color: #edc62a;
+  box-shadow: 1px 1px 10px #000;
+  margin-bottom: 80px;
 }
 
-.nav-link{
-  cursor:pointer;
-}
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+.navbar-brand img {
+  position: absolute;
+  top: 0;
+  filter: drop-shadow(-2px 2px 15px rgba(0, 0, 0, 0.7));
 }
 
-.example-full-width {
-  width: 100%;
-}
-
-.buscador{
-  position:absolute;
-  right: 50px;
-  top:5px;
-}
-
-.boton-buscador{
-  position:absolute;
-  right: 15px;
-  top:10px;
+.boton-buscador {
   margin-left: 10px;
-  color:aliceblue !important;
-  background-color:#0E9AE0 !important;
+  color: aliceblue !important;
+  background-color: #0E9AE0 !important;
 }

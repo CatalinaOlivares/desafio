@@ -10,15 +10,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { CabezasSimpsonsComponent } from './cabezas-simpsons/cabezas-simpsons.component';
 
 
 @NgModule({
   declarations: [
     BusquedaComponent,
     FormComponent,
-    
-  
     TableComponent,
+    CabezasSimpsonsComponent,
   ],
   imports: [
     CommonModule,
@@ -35,11 +35,12 @@ import { MatButtonModule } from '@angular/material/button';
     BusquedaComponent,
     FormComponent,
     TableComponent,
+    CabezasSimpsonsComponent
   ],
   providers: [
     { provide: MAT_DIALOG_DATA, useValue: {} },
     { provide: MatDialogRef, useValue: {} }
   ]
-  
+
 })
 export class ComponentsModule { }
