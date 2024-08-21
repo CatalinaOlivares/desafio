@@ -10,11 +10,4 @@ export class NavbarComponent {
 
   constructor(private router: Router){}
 
-  Inicio(){
-    this.router.navigateByUrl('/inicio');
-  }
-
-  Registro(){
-    this.router.navigateByUrl('/registro');
-  }
 }
